@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Currículo digital grátis">
+    <meta name="keywords" content="Curriculo gratis, currículo grátis, curriculo digital, curriculo digital gratis, faça seu curriclo gratis, crie seu curriculo">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="estilo.css">
     <title>Currículo Digital</title>
@@ -22,6 +26,10 @@
             <input type="email" id="email" placeholder="Seu email">
         </div>
         <div class="form-group">
+            <h4>Interesse Profissional</h4>
+            <textarea id="interesse" cols="26" rows="8" placeholder="Qual habilidade pretende desenvolver ou aprimorar? Quais áreas você gosta mais de trabalhar?"></textarea>
+        </div>
+        <div class="form-group">
             <h4>Formação Acadêmica</h4>
 
             <label>Formação Mais Recente</label><br>
@@ -37,6 +45,21 @@
             <textarea id="detalhe2" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br>
         </div>
         <div class="form-group">
+            <h4>Experiências Profissionais</h4>
+
+            <label>Último Emprego</label><br>
+            <input type="text" id="trab1" placeholder="Função"><br>
+            <input type="text" id="empresa1" placeholder="Empresa"><br>
+            <input type="text" id="ano11" placeholder="Período"><br>
+            <textarea id="detalhe11" cols="25" rows="7" placeholder="Descrição das atividades"></textarea><br><br>
+
+            <label>Trabalho Anterior</label><br>
+            <input type="text" id="trab2" placeholder="Função"><br>
+            <input type="text" id="empresa2" placeholder="Empresa"><br>
+            <input type="text" id="ano22" placeholder="Período"><br>
+            <textarea id="detalhe22" cols="25" rows="7" placeholder="Descrição das atividades"></textarea><br><br>
+        </div>
+        <div class="form-group">
             <h4>Habilidades</h4>
 
             <label>Habilidade 1</label>
@@ -44,10 +67,10 @@
 
             <label>Nível da habilidade</label>
             <select id="nivel1">
-                <option value="25%">25%</option>
-                <option value="50%">50%</option>
-                <option value="75%">75%</option>
-                <option value="100%">100%</option>
+                <option>25%</option>
+                <option>50%</option>
+                <option >75%</option>
+                <option >100%</option>
             </select><br><br>
 
             <label>Habilidade 2</label>
@@ -55,10 +78,10 @@
 
             <label>Nível da habilidade</label>
             <select id="nivel2">
-                <option value="25%">25%</option>
-                <option value="50%">50%</option>
-                <option value="75%">75%</option>
-                <option value="100%">100%</option>
+                <option>25%</option>
+                <option>50%</option>
+                <option>75%</option>
+                <option>100%</option>
             </select>
         </div>
         <div class="form-group">
@@ -68,7 +91,7 @@
     </header>
 
     <main>
-        <section class="container">
+        <section class="container d-flex flex-column">
             <article id="curriculo">
                 <div class="cima-cr">
                     <h1 id="titulo-principal"></h1>
@@ -82,33 +105,58 @@
 
                 <hr class="w-100">
 
-                <div id="conteudo">
-                    <div class="habilidades">
-                        <h4 class="mb-4">Habilidades Extras</h4>
-                        <h5 id="skill1"></h5>
-                        <p id="level1"></p><br><br>
-
-                        <h5 id="skill2"></h5>
-                        <p id="level2"></p><br><br>
-                    </div>
-                    <div class="principal">
-                        <h2 class="section-title">Formação Acadêmica</h2>
-                        <div class="form-group">
-                            <h3 id="edu1"></h3>
-                            <h4 id="inst1"></h4>
-                            <p id="year1"></p>
-                            <p id="details1"></p>
+                <div class="container">
+                    <div id="conteudo">
+                        <div class="habilidades">
+                            <h4 class="mb-4">Habilidades Extras</h4>
+                            <h5 id="skill1"></h5>
+                            <p id="level1"></p><br><br>
+    
+                            <h5 id="skill2"></h5>
+                            <p id="level2"></p><br><br>
                         </div>
-                        <div class="form-group">
-                            <h3 id="edu2"></h3>
-                            <h4 id="inst2"></h4>
-                            <p id="year2"></p>
-                            <p id="details2"></p>
+                        <div class="principal">
+                            <div>
+                                <h2 class="section-title">Interesse Profissional</h2>
+                                <p id="interest" style="text-indent: 5px;"></p>
+                            </div>
+                            <hr class="w-100">
+    
+                            <h2 class="section-title">Formação Acadêmica</h2>
+                            <div class="form-group">
+                                <h3 id="edu1"></h3>
+                                <h4 id="inst1"></h4>
+                                <p id="year1"></p>
+                                <p id="details1"></p>
+                            </div>
+                            <div class="form-group">
+                                <h3 id="edu2"></h3>
+                                <h4 id="inst2"></h4>
+                                <p id="year2"></p>
+                                <p id="details2"></p>
+                            </div>
+                            <hr class="w-100">
+                            <h2 class="section-title">Experiências Profissionais</h2>
+                            <div class="form-group">
+                                <h3 id="work1"></h3>
+                                <h4 id="place1"></h4>
+                                <p id="year11"></p>
+                                <p id="details11"></p>
+                            </div>
+                            <div class="form-group">
+                                <h3 id="work2"></h3>
+                                <h4 id="place2"></h4>
+                                <p id="year22"></p>
+                                <p id="details22"></p>
+                            </div>
+                            <hr class="w-100">
                         </div>
-                        <hr class="w-100">
                     </div>
                 </div>
             </article>
+            <div class="botoes">
+                <button id="imprimir" class="btn btn-warning shadow-sm" onclick="imprime()">Imprimir</button>
+            </div>
         </section>
     </main>
 
