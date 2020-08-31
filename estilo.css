@@ -1,0 +1,45 @@
+body{
+    background: whitesmoke;
+}
+#cabecalho{
+    width: 25%; height: 100%;
+    padding: 2%;
+    position: fixed;
+    display: flex; flex-direction: column;
+    float: left; overflow-y: scroll;
+    color: whitesmoke;
+    background: #555;
+}
+#curriculo{
+    width: 100%; height: 100%;
+    padding: 5%; margin-left: 25%;
+    border: solid grey 1px;
+}
+.cima-cr{
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center;
+}
+.cima-cr > ul{
+    list-style: none;
+}
+#conteudo{
+    display: flex; flex-direction: row; justify-content: center;
+}
+.principal{
+    width: 80%; height: auto;
+    display: flex; flex-direction: column; justify-content: center;
+}
+.section-title{
+    width: 45%;
+    border-bottom: solid grey 2px;
+    margin-bottom: 5%;
+}
+.habilidades{
+    width: 20%; height: auto;
+    padding: 2%; margin: 2%;
+    display: flex; flex-direction: column; justify-content: center;
+    color: whitesmoke;
+    text-shadow: grey .5px .5px 1.5px;
+    background: #1aa4b9;
+    border-radius: 5px;
+}
