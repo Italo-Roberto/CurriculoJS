@@ -38,8 +38,6 @@ body{
 }
 .botoes{
     display: flex; flex-direction: row; justify-content: center;
-    width: 50%; height: auto;
-    padding: 2%; margin-left: 50%;
 }
 
 /* Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
@@ -48,7 +46,7 @@ body{
         font-size: .8rem;
     }
     #cabecalho{
-        width: 100%; height: 25vh;
+        width: 100%; height: 32vh;
         padding: 2%;
         display: flex; flex-direction: row;
     }
@@ -57,7 +55,7 @@ body{
     }
     #curriculo{
         width: 95vw; height: 100%;
-        padding: 2%; margin-top: 26vh;
+        padding: 2%; margin-top: 32vh;
     }
     .div-small{
         margin-left: 5%;
@@ -65,6 +63,9 @@ body{
     .habilidades{
         width: 32vw; height: 35vh;
         padding: 2%; margin-right: 2% ;
+    }
+    .botoes{
+        margin-top: 2%;
     }
  }
 
@@ -74,7 +75,7 @@ body{
         font-size: .9rem;
     }
     #cabecalho{
-        width: 100%; height: 25%;
+        width: 100%; height: 35vh;
         padding: 2%;
         display: flex; flex-direction: row;
     }
@@ -83,7 +84,7 @@ body{
     }
     #curriculo{
         width: 100vw; height: 100%;
-        padding: 2%; margin-top: 25vh; margin-left: -14vw;
+        padding: 2%; margin-top: 35vh; margin-left: -14vw;
     }
     .div-small{
         margin-left: 5%;
@@ -95,6 +96,9 @@ body{
     .habilidades{
         width: 22vw; height: 35vh;
         padding: 2%; margin-right: 2% ;
+    }
+    .botoes{
+        margin-top: 2%;
     }
  }
 
@@ -125,6 +129,10 @@ body{
         width: 22vw; height: 40vh;
         padding: 2%; margin: auto ;
     }
+    .botoes{
+        width: 50%; height: auto;
+        padding: 2%; margin-left: 50%;
+    }
  }
 
 /* Dispositivos large (desktops com 992px ou mais) */
@@ -153,6 +161,10 @@ body{
     .habilidades{
         width: 20%; height: 50%;
         padding: 2%; margin: 2%;
+    }
+    .botoes{
+        width: 50%; height: auto;
+        padding: 2%; margin-left: 45%;
     }
  }
 
