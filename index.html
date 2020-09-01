@@ -18,24 +18,24 @@
 
 <body onloadstart="doacao()">
     <header id="cabecalho">
-        <h3>Informações Pessoais</h3>
+        <h3 id="titulo-form">Informações Pessoais</h3>
         <div class="form-group">
             <label>Seu nome completo: </label>
             <input type="text" id="nome" placeholder="Ex: Italo Roberto">
         </div>
-        <div class="form-group">
+        <div class="form-group div-small">
             <label>Informações pessoais: </label><br>
             <input type="number" class="w-25" id="idade" placeholder="Idade"> <input type="text" id="natural"
                 placeholder="Natural de qual cidade?"> <br>
             <input type="text" id="telefone" placeholder="Telefone para contato"><br>
             <input type="email" id="email" placeholder="Seu email">
         </div>
-        <div class="form-group">
+        <div class="form-group div-small">
             <h4>Interesse Profissional</h4>
             <textarea id="interesse" cols="26" rows="8"
                 placeholder="Qual habilidade pretende desenvolver ou aprimorar? Quais áreas você gosta mais de trabalhar?"></textarea>
         </div>
-        <div class="form-group">
+        <div class="form-group div-small">
             <h4>Formação Acadêmica</h4>
 
             <label>Formação Mais Recente</label><br>
@@ -43,14 +43,15 @@
             <input type="text" id="escola1" placeholder="Instituição"><br>
             <input type="number" id="ano1" placeholder="Ano de conclusão"><br>
             <textarea id="detalhe1" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br>
-
+        </div>
+        <div class="form-group div-small">
             <label>Formação Anterior</label><br>
             <input type="text" id="curso2" placeholder="Nome do curso"><br>
             <input type="text" id="escola2" placeholder="Instituição"><br>
             <input type="number" id="ano2" placeholder="Ano de conclusão"><br>
             <textarea id="detalhe2" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br>
         </div>
-        <div class="form-group">
+        <div class="form-group div-small">
             <h4>Experiências Profissionais</h4>
 
             <label>Último Emprego</label><br>
@@ -58,14 +59,15 @@
             <input type="text" id="empresa1" placeholder="Empresa"><br>
             <input type="text" id="ano11" placeholder="Período"><br>
             <textarea id="detalhe11" cols="25" rows="7" placeholder="Descrição das atividades"></textarea><br><br>
-
+        </div>
+        <div class="form-group div-small">
             <label>Trabalho Anterior</label><br>
             <input type="text" id="trab2" placeholder="Função"><br>
             <input type="text" id="empresa2" placeholder="Empresa"><br>
             <input type="text" id="ano22" placeholder="Período"><br>
             <textarea id="detalhe22" cols="25" rows="7" placeholder="Descrição das atividades"></textarea><br><br>
         </div>
-        <div class="form-group">
+        <div class="form-group div-small">
             <h4>Habilidades</h4>
 
             <label>Habilidade 1</label>
@@ -90,15 +92,15 @@
                 <option>100%</option>
             </select>
         </div>
-        <div class="form-group">
+        <div class="form-group div-small">
             <button class="btn btn-info" id="enviar" onclick="escrever()">Escrever</button>
             <button class="btn btn-warning" id="apagar" onclick="apagar()">Limpar</button>
         </div>
     </header>
 
     <main>
-        <section class="container d-flex flex-column">
-            <article id="curriculo">
+        <article class="container d-flex flex-column">
+            <section id="curriculo">
                 <div class="cima-cr">
                     <h1 id="titulo-principal"></h1>
                     <ul>
@@ -159,11 +161,11 @@
                         </div>
                     </div>
                 </div>
-            </article>
+            </section>
             <div class="botoes">
                 <button id="imprimir" class="btn btn-warning shadow-sm" onclick="imprime()">Imprimir</button>
             </div>
-        </section>
+        </article>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

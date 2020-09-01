@@ -2,18 +2,13 @@ body{
     background: whitesmoke;
 }
 #cabecalho{
-    width: 25%; height: 100%;
-    padding: 2%;
     position: fixed;
-    display: flex; flex-direction: column;
-    float: left; overflow-y: scroll;
+    overflow-y: scroll;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: whitesmoke;
     background: #555;
 }
 #curriculo{
-    width: 100%; height: 100%;
-    padding: 5%; margin-left: 25%;
     border: solid grey 1px;
     background: white;
 }
@@ -29,18 +24,12 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 .principal{
-    width: 80%; height: auto;
-    margin: auto 2% auto 2%;
     display: flex; flex-direction: column; justify-content: center;
 }
 .section-title{
-    width: 55%;
-    padding: 1%; margin-bottom: 5%;
     border-bottom: solid grey 2px;
 }
 .habilidades{
-    width: 20%; height: 50%;
-    padding: 2%; margin: 2%;
     display: flex; flex-direction: column; justify-content: center;
     color: whitesmoke;
     text-shadow: grey .5px .5px 1.5px;
@@ -52,6 +41,120 @@ body{
     width: 50%; height: auto;
     padding: 2%; margin-left: 50%;
 }
+
+/* Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
+@media (max-width: 575.98px) { 
+    *{
+        font-size: .8rem;
+    }
+    #cabecalho{
+        width: 100%; height: 25vh;
+        padding: 2%;
+        display: flex; flex-direction: row;
+    }
+    #titulo-form{
+        display: none;
+    }
+    #curriculo{
+        width: 95vw; height: 100%;
+        padding: 2%; margin-top: 26vh;
+    }
+    .div-small{
+        margin-left: 5%;
+    }
+    .habilidades{
+        width: 32vw; height: 35vh;
+        padding: 2%; margin-right: 2% ;
+    }
+ }
+
+/* Dispositivos small (telefones em modo paisagem, com 576px ou mais) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    *{
+        font-size: .9rem;
+    }
+    #cabecalho{
+        width: 100%; height: 25%;
+        padding: 2%;
+        display: flex; flex-direction: row;
+    }
+    #titulo-form{
+        display: none;
+    }
+    #curriculo{
+        width: 100vw; height: 100%;
+        padding: 2%; margin-top: 25vh; margin-left: -14vw;
+    }
+    .div-small{
+        margin-left: 5%;
+    }
+    .section-title{
+        width: 50vh;
+        padding: 1%; margin-bottom: 3%;
+    }
+    .habilidades{
+        width: 22vw; height: 35vh;
+        padding: 2%; margin-right: 2% ;
+    }
+ }
+
+/* Dispositivos médios (tablets com 768px ou mais) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    *{
+        font-size: .9rem;
+    }
+    #cabecalho{
+        width: 35vw; height: 100%;
+        padding: 2%;
+        display: flex; flex-direction: column;
+        float: left;
+    }
+    #curriculo{
+        width: 100%; height: 100%;
+        padding: 5%; margin-left: 23vw;
+    }
+    .principal{
+        width: 80%; height: auto;
+        margin: auto 2% auto 2%;
+    }
+    .section-title{
+        width: 47vh;
+        padding: 1%; margin-bottom: 5%;
+    }
+    .habilidades{
+        width: 22vw; height: 40vh;
+        padding: 2%; margin: auto ;
+    }
+ }
+
+/* Dispositivos large (desktops com 992px ou mais) */
+@media (min-width: 992px) and (max-width: 1920px) { 
+    *{
+        font-size: 1rem;
+    }
+    #cabecalho{
+        width: 25%; height: 100%;
+        padding: 2%;
+        display: flex; flex-direction: column;
+        float: left;
+    }
+    #curriculo{
+        width: 100%; height: 100%;
+        padding: 5%; margin-left: 18%;
+    }
+    .principal{
+        width: 80%; height: auto;
+        margin: auto 2% auto 2%;
+    }
+    .section-title{
+        width: 55%;
+        padding: 1%; margin-bottom: 5%;
+    }
+    .habilidades{
+        width: 20%; height: 50%;
+        padding: 2%; margin: 2%;
+    }
+ }
 
 @media print{
     @page 
