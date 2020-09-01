@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Currículo digital grátis">
-    <meta name="keywords" content="Curriculo gratis, currículo grátis, curriculo digital, curriculo digital gratis, faça seu curriclo gratis, crie seu curriculo">
+    <meta name="keywords"
+        content="Curriculo gratis, currículo grátis, curriculo digital, curriculo digital gratis, faça seu curriclo gratis, crie seu curriculo">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <title>Currículo Digital</title>
-  </head>
+</head>
 
-  <body>
+<body onloadstart="doacao()">
     <header id="cabecalho">
         <h3>Informações Pessoais</h3>
         <div class="form-group">
@@ -21,13 +25,15 @@
         </div>
         <div class="form-group">
             <label>Informações pessoais: </label><br>
-            <input type="number" class="w-25" id="idade" placeholder="Idade"> <input type="text" id="natural" placeholder="Natural de qual cidade?"> <br>
+            <input type="number" class="w-25" id="idade" placeholder="Idade"> <input type="text" id="natural"
+                placeholder="Natural de qual cidade?"> <br>
             <input type="text" id="telefone" placeholder="Telefone para contato"><br>
             <input type="email" id="email" placeholder="Seu email">
         </div>
         <div class="form-group">
             <h4>Interesse Profissional</h4>
-            <textarea id="interesse" cols="26" rows="8" placeholder="Qual habilidade pretende desenvolver ou aprimorar? Quais áreas você gosta mais de trabalhar?"></textarea>
+            <textarea id="interesse" cols="26" rows="8"
+                placeholder="Qual habilidade pretende desenvolver ou aprimorar? Quais áreas você gosta mais de trabalhar?"></textarea>
         </div>
         <div class="form-group">
             <h4>Formação Acadêmica</h4>
@@ -69,8 +75,8 @@
             <select id="nivel1">
                 <option>25%</option>
                 <option>50%</option>
-                <option >75%</option>
-                <option >100%</option>
+                <option>75%</option>
+                <option>100%</option>
             </select><br><br>
 
             <label>Habilidade 2</label>
@@ -111,7 +117,7 @@
                             <h4 class="mb-4">Habilidades Extras</h4>
                             <h5 id="skill1"></h5>
                             <p id="level1"></p><br><br>
-    
+
                             <h5 id="skill2"></h5>
                             <p id="level2"></p><br><br>
                         </div>
@@ -121,7 +127,7 @@
                                 <p id="interest" style="text-indent: 5px;"></p>
                             </div>
                             <hr class="w-100">
-    
+
                             <h2 class="section-title">Formação Acadêmica</h2>
                             <div class="form-group">
                                 <h3 id="edu1"></h3>
@@ -160,9 +166,16 @@
         </section>
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
-  </body>
+</body>
+
 </html>

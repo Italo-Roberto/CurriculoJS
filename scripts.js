@@ -95,3 +95,11 @@ function imprime() {
 
     window.print(conteudo)
 }
+
+let tempo_doacao = window.setTimeout(doacao, 120000)
+function doacao() {
+    Swal.fire({
+        title: 'Esta página foi útil para você?',
+        html: '<!-- INICIO FORMULARIO BOTAO PAGSEGURO --><p>Clique no botão abaixo e doe e valor que quiser!</p><form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post"><input type="hidden" name="currency" value="BRL" /><input type="hidden" name="receiverEmail" value="italoroberto61@gmail.com" /><input type="hidden" name="iot" value="button" /><input type="image"src="https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/120x53-doar.gif"name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" /></form><!-- FINAL FORMULARIO BOTAO PAGSEGURO -->',
+    })
+}
