@@ -58,36 +58,6 @@ function escrever() {
     document.getElementById('level2').innerHTML = 'Conhecimento: ' + resultado2
 }
 
-//Função para apagar conteúdo
-function apagar() {
-    document.getElementById('titulo-principal').innerHTML = ''
-    document.getElementById('idade-atual').innerHTML = ''
-    document.getElementById('naturalidade').innerHTML = ''
-    document.getElementById('contato').innerHTML = ''
-    document.getElementById('mail').innerHTML = ''
-    document.getElementById('interest').innerHTML = ''
-    document.getElementById('edu1').innerHTML = ''
-    document.getElementById('inst1').innerHTML = ''
-    document.getElementById('year1').innerHTML = ''
-    document.getElementById('details1').innerHTML = ''
-    document.getElementById('edu2').innerHTML = ''
-    document.getElementById('inst2').innerHTML = ''
-    document.getElementById('year2').innerHTML = ''
-    document.getElementById('details2').innerHTML = ''
-    document.getElementById('work1').innerHTML = trab1
-    document.getElementById('place1').innerHTML = ''
-    document.getElementById('year11').innerHTML = ''
-    document.getElementById('details11').innerHTML = ''
-    document.getElementById('work2').innerHTML = ''
-    document.getElementById('place2').innerHTML = ''
-    document.getElementById('year22').innerHTML = ''
-    document.getElementById('details22').innerHTML = ''
-    document.getElementById('skill1').innerHTML = ''
-    document.getElementById('skill2').innerHTML = ''
-    document.getElementById('level1').innerHTML = ''
-    document.getElementById('level2').innerHTML = ''
-}
-
 //Imprimindo conteúdo
 function imprime() {
     let elemento = document.getElementById('conteudo')
