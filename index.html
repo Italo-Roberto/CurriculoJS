@@ -22,7 +22,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="estilo.css">
+    <!-- Sweet alert e jsPDF -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="jsPDF/dist/jspdf.min.js"></script>
     <title>Currículo Digital</title>
 </head>
 
@@ -173,7 +175,8 @@
                 </div>
             </section>
             <div class="botoes">
-                <button id="imprimir" class="btn btn-warning shadow-sm" onclick="imprime()">Imprimir</button>
+                <button id="pdf" class="btn btn-info shadow-sm" onclick="salvarPdf()">Gerar PDF</button>
+                <button id="imprimir" class="btn btn-warning shadow-sm ml-2" onclick="imprime()">Imprimir</button>
             </div>
         </article>
     </main>

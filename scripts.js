@@ -58,6 +58,15 @@ function escrever() {
     document.getElementById('level2').innerHTML = 'Conhecimento: ' + resultado2
 }
 
+//Gerando PDF
+function salvarPdf() {
+    let arquivo = new jsPDF()
+    let curriculo = document.getElementById('curriculo')
+
+    arquivo.fromHTML(curriculo)
+    arquivo.save('Currículo.pdf')
+}
+
 //Imprimindo conteúdo
 function imprime() {
     let elemento = document.getElementById('conteudo')
