@@ -178,10 +178,9 @@ body{
         border: none;
     }
     .habilidades{
+        display: block;
         visibility: visible;
-        color: whitesmoke;
-        text-shadow: grey .5px .5px 1.5px;
-        background: #999;
-        border-radius: 5px;
+        -webkit-print-color-adjust: exact;
+
     }
 }

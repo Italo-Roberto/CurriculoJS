@@ -17,7 +17,7 @@
     <meta name="description" content="Currículo digital grátis">
     <meta name="author" content="Italo Roberto">
     <meta name="keywords"
-        content="Curriculo gratis, currículo grátis, curriculo digital, curriculo digital gratis, faça seu curriculo gratis, crie seu curriculo">
+        content="currículo online, currocilo online grátis, curriculo gratis, currículo grátis, curriculo digital, curriculo digital gratis, faça seu curriculo gratis, crie seu curriculo">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
     <meta name="reply-to" content="https://italo-roberto.github.io/CurriculoJS/">
@@ -36,8 +36,8 @@
 </head>
 
 <body onloadstart="doacao()">
-    <header oninput="escrever()">
-        <form id="cabecalho">
+    <header>
+        <form id="cabecalho" oninput="escrever()">
             <div class="form-group div-small">
                 <h3 id="titulo-form">Informações Pessoais</h3>
                 <label>Seu nome completo: </label>
@@ -62,14 +62,9 @@
                 <input type="text" id="escola1" placeholder="Instituição"><br>
                 <input type="number" id="ano1" placeholder="Ano de conclusão"><br>
                 <textarea id="detalhe1" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br>
+                <button id="add-form" class="btn btn-info">Adicionar Formação</button>
             </div>
-            <div class="form-group div-small">
-                <label>Formação Anterior</label><br>
-                <input type="text" id="curso2" placeholder="Nome do curso"><br>
-                <input type="text" id="escola2" placeholder="Instituição"><br>
-                <input type="number" id="ano2" placeholder="Ano de conclusão"><br>
-                <textarea id="detalhe2" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br>
-            </div>
+            <div id="form1"></div>
             <div class="form-group div-small">
                 <h4>Experiências Profissionais</h4>
     
@@ -78,14 +73,10 @@
                 <input type="text" id="empresa1" placeholder="Empresa"><br>
                 <input type="text" id="ano11" placeholder="Período"><br>
                 <textarea id="detalhe11" cols="25" rows="7" placeholder="Descrição das atividades"></textarea><br><br>
+                <button id="add-trab" class="btn btn-info">Adicionar Experiência</button>
             </div>
-            <div class="form-group div-small">
-                <label>Trabalho Anterior</label><br>
-                <input type="text" id="trab2" placeholder="Função"><br>
-                <input type="text" id="empresa2" placeholder="Empresa"><br>
-                <input type="text" id="ano22" placeholder="Período"><br>
-                <textarea id="detalhe22" cols="25" rows="7" placeholder="Descrição das atividades"></textarea><br><br>
-            </div>
+            <div id="exp1"></div>
+
             <div class="form-group div-small">
                 <h4>Habilidades</h4>
     

@@ -52,11 +52,53 @@ function escrever() {
     document.getElementById('skill2').innerHTML = hab2
 
     let resultado1 = document.getElementById('nivel1').value
-    document.getElementById('level1').innerHTML = 'Conhecimento: ' + resultado1
+    switch (resultado1) {
+        case '25%':
+            document.getElementById('level1').innerHTML = '<div class="progress"><div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div></div>'
+            break;
+        case '50%':
+            document.getElementById('level1').innerHTML = '<div class="progress"><div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div></div>'
+            break;
+        case '75%':
+            document.getElementById('level1').innerHTML = '<div class="progress"><div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div></div>'
+            break;
+        case '100%':
+            document.getElementById('level1').innerHTML = '<div class="progress"><div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div></div>'
+        default:
+            break;
+    }
 
     let resultado2 = document.getElementById('nivel2').value
-    document.getElementById('level2').innerHTML = 'Conhecimento: ' + resultado2
+    switch (resultado2) {
+        case '25%':
+            document.getElementById('level2').innerHTML = '<div class="progress"><div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div></div>'
+            break;
+        case '50%':
+            document.getElementById('level2').innerHTML = '<div class="progress"><div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div></div>'
+            break;
+        case '75%':
+            document.getElementById('level2').innerHTML = '<div class="progress"><div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div></div>'
+            break;
+        case '100%':
+            document.getElementById('level2').innerHTML = '<div class="progress"><div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div></div>'
+        default:
+            break;
+    }
 }
+
+//Botões de adição de campos
+$('#add-form').click(function() {
+  $('#form1').append('<div class="form-group div-small"><label>Formação Anterior</label><br><input type="text" id="curso2" placeholder="Nome do curso"><br><input type="text" id="escola2" placeholder="Instituição"><br><input type="number" id="ano2" placeholder="Ano de conclusão"><br><textarea id="detalhe2" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br></div>');  
+})
+$('#add-trab').click(function() {
+    $('#exp1').append('<div class="form-group div-small"><label>Trabalho Anterior</label><br><input type="text" id="trab2" placeholder="Função"><br><input type="text" id="empresa2" placeholder="Empresa"><br><input type="text" id="ano22" placeholder="Período"><br><textarea id="detalhe22" cols="25" rows="7" placeholder="Descrição das atividades"></textarea><br><br></div>');  
+})
+//Desbilitar submit do form
+$(document).ready(function() {
+    $("#cabecalho").submit(function() {
+        return false;
+    });
+});
 
 //Gerando PDF
 function salvarPdf() {
