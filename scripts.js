@@ -84,6 +84,16 @@ function escrever() {
         default:
             break;
     }
+
+    let nivel_idioma = document.getElementById('nivel-idioma').value
+    switch (nivel_idioma) {
+        case '1':
+            document.getElementById('')
+            break;
+    
+        default:
+            break;
+    }
 }
 
 //Botões de adição de campos
@@ -92,6 +102,9 @@ $('#add-form').click(function() {
 })
 $('#add-trab').click(function() {
     $('#exp1').append('<div class="form-group div-small"><label>Trabalho Anterior</label><br><input type="text" id="trab2" placeholder="Função"><br><input type="text" id="empresa2" placeholder="Empresa"><br><input type="text" id="ano22" placeholder="Período"><br><textarea id="detalhe22" cols="25" rows="7" placeholder="Descrição das atividades"></textarea><br><br></div>');  
+})
+$('#add-idioma').click(function() {
+    $('#idioma2').append('<input type="text" placeholder="Português"><label>Nível: <select id="nivel-idioma"><option value="1">Nativo/ Fluente</option><option value="2">Intermediário</option><option value="3">Básico</option></select></label>');  
 })
 //Desbilitar submit do form
 $(document).ready(function() {
@@ -117,7 +130,7 @@ function imprime() {
     window.print(conteudo)
 }
 
-let tempo_doacao = window.setTimeout(doacao, 120000)
+let tempo_doacao = window.setTimeout(doacao, 360000)
 function doacao() {
     Swal.fire({
         title: 'Esta página foi útil para você?',

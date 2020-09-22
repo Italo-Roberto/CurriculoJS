@@ -17,11 +17,13 @@
     <meta name="description" content="Currículo digital grátis">
     <meta name="author" content="Italo Roberto">
     <meta name="keywords"
-        content="currículo online, currocilo online grátis, curriculo gratis, currículo grátis, curriculo digital, curriculo digital gratis, faça seu curriculo gratis, crie seu curriculo">
+        content="currículo online, curriculo online grátis, curriculo gratis, currículo grátis, curriculo digital, curriculo digital gratis, faça seu curriculo gratis, crie seu curriculo">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
     <meta name="reply-to" content="https://italo-roberto.github.io/CurriculoJS/">
     <meta name="copyright" content="https://italo-roberto.github.io/CurriculoJS/" />
+
+    <link rel="shortcut icon" href="cafe-edit.ico" type="image/x-icon">
     
     <link rel="base" href="https://italo-roberto.github.io/CurriculoJS/">
     <link rel="canonical" href="https://italo-roberto.github.io/CurriculoJS/">
@@ -103,6 +105,19 @@
                 </select>
             </div>
             <div class="form-group div-small">
+                <h4>Idiomas</h4>
+                <input type="text" id="idioma" placeholder="Português">
+                <label>Nível: 
+                    <select id="nivel-idioma">
+                        <option value="1">Nativo/ Fluente</option>
+                        <option value="2">Intermediário</option>
+                        <option value="3">Básico</option>
+                    </select>
+                </label>
+                <div id="idioma2"></div>
+                <button id="add-idioma" class="btn btn-info">Adicionar Idioma</button>
+            </div>
+            <div class="form-group div-small">
                 <input type="reset" value="Limpar Campos" class="btn btn-warning mb-2">
             </div>
         </form>
@@ -132,6 +147,16 @@
 
                             <h5 id="skill2"></h5>
                             <p id="level2"></p><br><br>
+
+                            <h4>Idiomas</h4>
+                            <h5 id="language1"></h5>
+                            <p id="level-language1"></p><br><br>
+
+                            <h5 id="language2"></h5>
+                            <p id="level-language2"></p><br><br>
+
+                            <h5 id="language3"></h5>
+                            <p id="level-language3"></p><br><br>
                         </div>
                         <div class="principal">
                             <div>
