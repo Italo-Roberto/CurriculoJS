@@ -26,6 +26,8 @@ function escrever() {
     let hab1 = document.getElementById('hab1').value
     let hab2 = document.getElementById('hab2').value
 
+    let idioma = document.getElementById('idioma').value
+
     document.getElementById('titulo-principal').innerHTML = titulo1
     document.getElementById('idade-atual').innerHTML = idade + ' anos'
     document.getElementById('naturalidade').innerHTML = 'Natural de: ' + natural
@@ -50,6 +52,7 @@ function escrever() {
     document.getElementById('details22').innerHTML = detalhe22
     document.getElementById('skill1').innerHTML = hab1
     document.getElementById('skill2').innerHTML = hab2
+    document.getElementById('language1').innerHTML = idioma
 
     let resultado1 = document.getElementById('nivel1').value
     switch (resultado1) {
@@ -88,7 +91,13 @@ function escrever() {
     let nivel_idioma = document.getElementById('nivel-idioma').value
     switch (nivel_idioma) {
         case '1':
-            document.getElementById('')
+            document.getElementById('level-language1').innerHTML = 'Nativo / Fluente'
+            break;
+        case '2':
+            document.getElementById('level-language1').innerHTML = 'Intermediário'
+            break;
+        case '3':
+            document.getElementById('level-language1').innerHTML = 'Básico'
             break;
     
         default:
