@@ -38,84 +38,170 @@
 
 <body onloadstart="doacao()">
     <header>
-        <form id="cabecalho" oninput="escrever()">
-            <div class="form-group div-small">
-                <h3 id="titulo-form">Informações Pessoais</h3>
-                <label>Seu nome completo: </label>
-                <input type="text" id="nome" placeholder="Ex: Italo Roberto"><br><br>
-                
-                <label>Informações pessoais: </label><br>
-                <input type="number" class="w-25" id="idade" placeholder="Idade"> 
-                <input type="text" id="natural" class="campos" placeholder="Natural de qual cidade?"> <br>
-                <input type="text" id="telefone" class="campos" placeholder="Telefone para contato"><br>
-                <input type="email" id="email" class="campos" placeholder="Seu email">
+        <form id="cabecalho">
+            <div class="accordion" id="accordionExample">
+                <div class="card" style="background: #555; border: none;">
+                  <div class="card-header" id="headingOne" style="background: #555; border: none;">
+                    <h5 class="mb-0">
+                      <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h4 id="titulo-form">Informações Pessoais</h4>
+                      </button>
+                    </h5>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="form-group div-small"  oninput="escrever_pessoal()">
+                        
+                        <label>Seu nome completo: </label>
+                        <input type="text" id="nome" placeholder="Ex: Italo Roberto"><br><br>
+                        
+                        <label>Informações pessoais: </label><br>
+                        <input type="number" class="w-25" id="idade" placeholder="Idade"> 
+                        <input type="text" id="natural" class="campos" placeholder="Natural de qual cidade?"> <br>
+                        <input type="text" id="telefone" class="campos" placeholder="Telefone para contato"><br>
+                        <input type="email" id="email" class="campos" placeholder="Seu email">
+                    </div>
+                  </div>
+                </div>
             </div>
-            <div class="form-group div-small">
-                <h4>Interesse Profissional</h4>
-                <textarea id="interesse" cols="26" rows="8"
-                    placeholder="Qual habilidade pretende desenvolver ou aprimorar? Quais áreas você gosta mais de trabalhar?"></textarea>
-            </div>
-            <div class="form-group div-small">
-                <h4>Formação Acadêmica</h4>
-    
-                <label>Formação Mais Recente</label><br>
-                <input type="text" id="curso1" placeholder="Nome do curso"><br>
-                <input type="text" id="escola1" placeholder="Instituição"><br>
-                <input type="number" id="ano1" placeholder="Ano de conclusão"><br>
-                <textarea id="detalhe1" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br>
-                <button id="add-form" class="btn btn-info">Adicionar Formação</button>
-            </div>
-            <div id="form1"></div>
-            <div class="form-group div-small">
-                <h4>Experiências Profissionais</h4>
-    
-                <label>Último Emprego</label><br>
-                <input type="text" id="trab1" placeholder="Função"><br>
-                <input type="text" id="empresa1" placeholder="Empresa"><br>
-                <input type="text" id="ano11" placeholder="Período"><br>
-                <textarea id="detalhe11" cols="25" rows="7" placeholder="Descrição das atividades"></textarea><br><br>
-                <button id="add-trab" class="btn btn-info">Adicionar Experiência</button>
-            </div>
-            <div id="exp1"></div>
 
-            <div class="form-group div-small">
-                <h4>Habilidades</h4>
-    
-                <label>Habilidade 1</label>
-                <input type="text" id="hab1"><br>
-    
-                <label>Nível da habilidade</label>
-                <select id="nivel1">
-                    <option>25%</option>
-                    <option>50%</option>
-                    <option>75%</option>
-                    <option>100%</option>
-                </select><br><br>
-    
-                <label>Habilidade 2</label>
-                <input type="text" id="hab2"><br>
-    
-                <label>Nível da habilidade</label>
-                <select id="nivel2">
-                    <option>25%</option>
-                    <option>50%</option>
-                    <option>75%</option>
-                    <option>100%</option>
-                </select>
+            <div class="accordion" id="accordionExample2">
+                <div class="card" style="background: #555; border: none;">
+                  <div class="card-header" id="headingOne" style="background: #555; border: none;">
+                    <h5 class="mb-0">
+                      <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                        <h4>Interesse Profissional</h4>
+                      </button>
+                    </h5>
+                  </div>
+              
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample2">
+                    <div class="form-group div-small" oninput="escrever_interesse()">
+                    <textarea id="interesse" cols="26" rows="8"
+                        placeholder="Qual habilidade pretende desenvolver ou aprimorar? Quais áreas você gosta mais de trabalhar?"></textarea>
+                    </div>
+                  </div>
+                </div>
             </div>
-            <div class="form-group div-small">
-                <h4>Idiomas</h4>
-                <input type="text" id="idioma" placeholder="Português">
-                <label>Nível: 
-                    <select id="nivel-idioma">
-                        <option value="1">Nativo/ Fluente</option>
-                        <option value="2">Intermediário</option>
-                        <option value="3">Básico</option>
-                    </select>
-                </label>
-                <div id="idioma2"></div>
-                <button id="add-idioma" class="btn btn-info">Adicionar Idioma</button>
+
+            <div class="accordion" id="accordionExample3">
+                <div class="card" style="background: #555; border: none;">
+                  <div class="card-header" id="headingOne" style="background: #555; border: none;">
+                    <h5 class="mb-0">
+                      <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                        <h4>Formação Acadêmica</h4>
+                      </button>
+                    </h5>
+                  </div>
+              
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample3">
+                    <div class="form-group div-small" oninput="escrever_formacao()">
+    
+                        <label>Formação Mais Recente</label><br>
+                        <input type="text" id="curso1" placeholder="Nome do curso"><br>
+                        <input type="text" id="escola1" placeholder="Instituição"><br>
+                        <input type="number" id="ano1" placeholder="Ano de conclusão"><br>
+                        <textarea id="detalhe1" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br>
+                        <button id="add-form" class="btn btn-info">Adicionar Formação</button>
+        
+                        <div id="form1"></div>
+                    </div>
+                  </div>
+                </div>
             </div>
+            
+            <div class="accordion" id="accordionExample4">
+                <div class="card" style="background: #555; border: none;">
+                  <div class="card-header" id="headingOne" style="background: #555; border: none;">
+                    <h5 class="mb-0">
+                      <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+                        <h4>Experiências Profissionais</h4>
+                      </button>
+                    </h5>
+                  </div>
+              
+                  <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample4">
+                    <div class="form-group div-small" oninput="escrever_profissao()">
+    
+                        <label>Último Emprego</label><br>
+                        <input type="text" id="trab1" placeholder="Função"><br>
+                        <input type="text" id="empresa1" placeholder="Empresa"><br>
+                        <input type="text" id="ano11" placeholder="Período"><br>
+                        <textarea id="detalhe11" cols="25" rows="7" placeholder="Descrição das atividades"></textarea><br><br>
+                        <button id="add-trab" class="btn btn-info">Adicionar Experiência</button>
+        
+                        <div id="exp1"></div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+            <div class="accordion" id="accordionExample5">
+                <div class="card" style="background: #555; border: none;">
+                  <div class="card-header" id="headingOne" style="background: #555; border: none;">
+                    <h5 class="mb-0">
+                      <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseOne">
+                        <h4>Habilidades</h4>
+                      </button>
+                    </h5>
+                  </div>
+              
+                  <div id="collapseFive" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample5">
+                    <div class="form-group div-small" oninput="escrever_habilidades()">
+    
+                        <label>Habilidade 1</label>
+                        <input type="text" id="hab1"><br>
+            
+                        <label>Nível da habilidade</label>
+                        <select id="nivel1">
+                            <option>25%</option>
+                            <option>50%</option>
+                            <option>75%</option>
+                            <option>100%</option>
+                        </select><br><br>
+            
+                        <label>Habilidade 2</label>
+                        <input type="text" id="hab2"><br>
+            
+                        <label>Nível da habilidade</label>
+                        <select id="nivel2">
+                            <option>25%</option>
+                            <option>50%</option>
+                            <option>75%</option>
+                            <option>100%</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="accordion" id="accordionExample2">
+                <div class="card" style="background: #555; border: none;">
+                  <div class="card-header" id="headingOne" style="background: #555; border: none;">
+                    <h5 class="mb-0">
+                      <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                        <h4>Idiomas</h4>
+                      </button>
+                    </h5>
+                  </div>
+              
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample2">
+                    <div class="form-group div-small" oninput="escrever_idioma()">
+                        <input type="text" id="idioma" placeholder="Português">
+                        <label>Nível: 
+                            <select id="nivel-idioma">
+                                <option value="1">Nativo/ Fluente</option>
+                                <option value="2">Intermediário</option>
+                                <option value="3">Básico</option>
+                            </select>
+                        </label>
+                        <div id="idioma2"></div>
+                        <button id="add-idioma" class="btn btn-info">Adicionar Idioma</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
             <div class="form-group div-small">
                 <input type="reset" value="Limpar Campos" class="btn btn-warning mb-2">
             </div>

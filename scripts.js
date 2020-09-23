@@ -1,11 +1,25 @@
 //Função escrever conteúdo
-function escrever() {
+function escrever_pessoal() {
     let titulo1 = document.getElementById('nome').value
     let idade = document.getElementById('idade').value
     let natural = document.getElementById('natural').value
     let telefone = document.getElementById('telefone').value
     let email = document.getElementById('email').value
+
+    document.getElementById('titulo-principal').innerHTML = titulo1
+    document.getElementById('idade-atual').innerHTML = idade + ' anos'
+    document.getElementById('naturalidade').innerHTML = 'Natural de: ' + natural
+    document.getElementById('contato').innerHTML = telefone
+    document.getElementById('mail').innerHTML = email
+}
+
+function escrever_interesse() {
     let interesse = document.getElementById('interesse').value
+
+    document.getElementById('interest').innerHTML = interesse
+}
+
+function escrever_formacao() {
     let curso1 = document.getElementById('curso1').value
     let escola1 = document.getElementById('escola1').value
     let ano1 = document.getElementById('ano1').value
@@ -14,6 +28,18 @@ function escrever() {
     let escola2 = document.getElementById('escola2').value
     let ano2 = document.getElementById('ano2').value
     let detalhe2 = document.getElementById('detalhe2').value
+
+    document.getElementById('edu1').innerHTML = curso1
+    document.getElementById('inst1').innerHTML = 'Instituição: ' + escola1
+    document.getElementById('year1').innerHTML = 'Ano de conclusão: ' + '<b>' + ano1 + '</b>'
+    document.getElementById('details1').innerHTML = detalhe1
+    document.getElementById('edu2').innerHTML = curso2
+    document.getElementById('inst2').innerHTML = 'Instituição: ' + escola2
+    document.getElementById('year2').innerHTML = 'Ano de conclusão: ' + '<b>' + ano2 + '</b>'
+    document.getElementById('details2').innerHTML = detalhe2
+}
+
+function escrever_profissao() {
     let trab1 = document.getElementById('trab1').value
     let empresa1 = document.getElementById('empresa1').value
     let ano11 = document.getElementById('ano11').value
@@ -23,25 +49,6 @@ function escrever() {
     let ano22 = document.getElementById('ano22').value
     let detalhe22 = document.getElementById('detalhe22').value
 
-    let hab1 = document.getElementById('hab1').value
-    let hab2 = document.getElementById('hab2').value
-
-    let idioma = document.getElementById('idioma').value
-
-    document.getElementById('titulo-principal').innerHTML = titulo1
-    document.getElementById('idade-atual').innerHTML = idade + ' anos'
-    document.getElementById('naturalidade').innerHTML = 'Natural de: ' + natural
-    document.getElementById('contato').innerHTML = telefone
-    document.getElementById('mail').innerHTML = email
-    document.getElementById('interest').innerHTML = interesse
-    document.getElementById('edu1').innerHTML = curso1
-    document.getElementById('inst1').innerHTML = 'Instituição: ' + escola1
-    document.getElementById('year1').innerHTML = 'Ano de conclusão: ' + '<b>' + ano1 + '</b>'
-    document.getElementById('details1').innerHTML = detalhe1
-    document.getElementById('edu2').innerHTML = curso2
-    document.getElementById('inst2').innerHTML = 'Instituição: ' + escola2
-    document.getElementById('year2').innerHTML = 'Ano de conclusão: ' + '<b>' + ano2 + '</b>'
-    document.getElementById('details2').innerHTML = detalhe2
     document.getElementById('work1').innerHTML = trab1
     document.getElementById('place1').innerHTML = 'Empresa: ' + empresa1
     document.getElementById('year11').innerHTML = 'Período: ' + ano11
@@ -50,9 +57,15 @@ function escrever() {
     document.getElementById('place2').innerHTML = 'Empresa: ' + empresa2
     document.getElementById('year22').innerHTML = 'Período: ' + ano22
     document.getElementById('details22').innerHTML = detalhe22
+}
+
+function escrever_habilidades() {
+
+    let hab1 = document.getElementById('hab1').value
+    let hab2 = document.getElementById('hab2').value
+
     document.getElementById('skill1').innerHTML = hab1
     document.getElementById('skill2').innerHTML = hab2
-    document.getElementById('language1').innerHTML = idioma
 
     let resultado1 = document.getElementById('nivel1').value
     switch (resultado1) {
@@ -87,6 +100,10 @@ function escrever() {
         default:
             break;
     }
+}
+
+function escrever_idioma() {
+    let idioma = document.getElementById('idioma').value
 
     let nivel_idioma = document.getElementById('nivel-idioma').value
     switch (nivel_idioma) {
@@ -103,6 +120,23 @@ function escrever() {
         default:
             break;
     }
+    let nivel_idioma2 = document.getElementById('nivel-idioma').value
+    switch (nivel_idioma2) {
+        case '1':
+            document.getElementById('level-language1').innerHTML = 'Nativo / Fluente'
+            break;
+        case '2':
+            document.getElementById('level-language1').innerHTML = 'Intermediário'
+            break;
+        case '3':
+            document.getElementById('level-language1').innerHTML = 'Básico'
+            break;
+    
+        default:
+            break;
+    }
+
+    document.getElementById('language1').innerHTML = idioma
 }
 
 //Botões de adição de campos
