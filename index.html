@@ -31,8 +31,8 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="estilo.css">
     <!-- Sweet alert e jsPDF -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="jsPDF/dist/jspdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <title>Currículo Digital</title>
 </head>
 
@@ -195,7 +195,7 @@
                                 <option value="3">Básico</option>
                             </select>
                         </label>
-                        <div id="idioma2"></div>
+                        <div id="idioma-container"></div>
                         <button id="add-idioma" class="btn btn-info">Adicionar Idioma</button>
                     </div>
                   </div>
@@ -209,7 +209,7 @@
     </header>
 
     <main>
-        <article class="container d-flex flex-column">
+        <article id="artigo" class="container d-flex flex-column">
             <section id="curriculo">
                 <div class="cima-cr">
                     <h1 id="titulo-principal"></h1>

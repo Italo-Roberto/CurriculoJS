@@ -104,6 +104,7 @@ function escrever_habilidades() {
 
 function escrever_idioma() {
     let idioma = document.getElementById('idioma').value
+    let idioma2 = document.getElementById('idioma2').value
 
     let nivel_idioma = document.getElementById('nivel-idioma').value
     switch (nivel_idioma) {
@@ -120,16 +121,16 @@ function escrever_idioma() {
         default:
             break;
     }
-    let nivel_idioma2 = document.getElementById('nivel-idioma').value
+    let nivel_idioma2 = document.getElementById('nivel-idioma2').value
     switch (nivel_idioma2) {
         case '1':
-            document.getElementById('level-language1').innerHTML = 'Nativo / Fluente'
+            document.getElementById('level-language2').innerHTML = 'Nativo / Fluente'
             break;
         case '2':
-            document.getElementById('level-language1').innerHTML = 'Intermediário'
+            document.getElementById('level-language2').innerHTML = 'Intermediário'
             break;
         case '3':
-            document.getElementById('level-language1').innerHTML = 'Básico'
+            document.getElementById('level-language2').innerHTML = 'Básico'
             break;
     
         default:
@@ -137,6 +138,7 @@ function escrever_idioma() {
     }
 
     document.getElementById('language1').innerHTML = idioma
+    document.getElementById('language2').innerHTML = idioma2
 }
 
 //Botões de adição de campos
@@ -147,7 +149,7 @@ $('#add-trab').click(function() {
     $('#exp1').append('<div class="form-group div-small"><label>Trabalho Anterior</label><br><input type="text" id="trab2" placeholder="Função"><br><input type="text" id="empresa2" placeholder="Empresa"><br><input type="text" id="ano22" placeholder="Período"><br><textarea id="detalhe22" cols="25" rows="7" placeholder="Descrição das atividades"></textarea><br><br></div>');  
 })
 $('#add-idioma').click(function() {
-    $('#idioma2').append('<input type="text" placeholder="Português"><label>Nível: <select id="nivel-idioma"><option value="1">Nativo/ Fluente</option><option value="2">Intermediário</option><option value="3">Básico</option></select></label>');  
+    $('#idioma-container').append('<input type="text" id="idioma2" placeholder="Português"><label>Nível: <select id="nivel-idioma2"><option value="1">Nativo/ Fluente</option><option value="2">Intermediário</option><option value="3">Básico</option></select></label>');  
 })
 //Desbilitar submit do form
 $(document).ready(function() {
@@ -158,6 +160,7 @@ $(document).ready(function() {
 
 //Gerando PDF
 function salvarPdf() {
+
     let arquivo = new jsPDF()
     let curriculo = document.getElementById('curriculo')
 
