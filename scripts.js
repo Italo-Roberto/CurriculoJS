@@ -1,11 +1,10 @@
-//Função escrever conteúdo
+//Funções para escrever conteúdo
 function escrever_pessoal() {
     let titulo1 = document.getElementById('nome').value
     let idade = document.getElementById('idade').value
     let natural = document.getElementById('natural').value
     let telefone = document.getElementById('telefone').value
     let email = document.getElementById('email').value
-
     document.getElementById('titulo-principal').innerHTML = titulo1
     document.getElementById('idade-atual').innerHTML = idade + ' anos'
     document.getElementById('naturalidade').innerHTML = 'Natural de: ' + natural
@@ -24,19 +23,41 @@ function escrever_formacao() {
     let escola1 = document.getElementById('escola1').value
     let ano1 = document.getElementById('ano1').value
     let detalhe1 = document.getElementById('detalhe1').value
-    let curso2 = document.getElementById('curso2').value
-    let escola2 = document.getElementById('escola2').value
-    let ano2 = document.getElementById('ano2').value
-    let detalhe2 = document.getElementById('detalhe2').value
-
     document.getElementById('edu1').innerHTML = curso1
     document.getElementById('inst1').innerHTML = 'Instituição: ' + escola1
     document.getElementById('year1').innerHTML = 'Ano de conclusão: ' + '<b>' + ano1 + '</b>'
     document.getElementById('details1').innerHTML = detalhe1
+}
+function escrever_formacao2() {
+    let curso2 = document.getElementById('curso2').value
+    let escola2 = document.getElementById('escola2').value
+    let ano2 = document.getElementById('ano2').value
+    let detalhe2 = document.getElementById('detalhe2').value
     document.getElementById('edu2').innerHTML = curso2
     document.getElementById('inst2').innerHTML = 'Instituição: ' + escola2
     document.getElementById('year2').innerHTML = 'Ano de conclusão: ' + '<b>' + ano2 + '</b>'
     document.getElementById('details2').innerHTML = detalhe2
+}
+
+function escrever_curso() {
+    let certificacao = document.getElementById('certificacao1').value
+    let lugar = document.getElementById('lugar1').value
+    let tempo = document.getElementById('tempo1').value
+    let adicional = document.getElementById('adicional1').value
+    document.getElementById('certification1').innerHTML = certificacao + ': '
+    document.getElementById('place1').innerHTML = lugar + ' - '
+    document.getElementById('time1').innerHTML = tempo
+    document.getElementById('adictional1').innerHTML = adicional
+}
+function escrever_curso2() {
+    let certificacao2 = document.getElementById('certificacao2').value
+    let lugar2 = document.getElementById('lugar2').value
+    let tempo2 = document.getElementById('tempo2').value
+    let adicional2 = document.getElementById('adicional2').value
+    document.getElementById('certification2').innerHTML = certificacao2 + ': '
+    document.getElementById('place2').innerHTML = lugar2 + ' - '
+    document.getElementById('time2').innerHTML = tempo2
+    document.getElementById('adictional2').innerHTML = adicional2
 }
 
 function escrever_profissao() {
@@ -44,15 +65,16 @@ function escrever_profissao() {
     let empresa1 = document.getElementById('empresa1').value
     let ano11 = document.getElementById('ano11').value
     let detalhe11 = document.getElementById('detalhe11').value
-    let trab2 = document.getElementById('trab2').value
-    let empresa2 = document.getElementById('empresa2').value
-    let ano22 = document.getElementById('ano22').value
-    let detalhe22 = document.getElementById('detalhe22').value
-
     document.getElementById('work1').innerHTML = trab1
     document.getElementById('place1').innerHTML = 'Empresa: ' + empresa1
     document.getElementById('year11').innerHTML = 'Período: ' + ano11
     document.getElementById('details11').innerHTML = detalhe11
+}
+function escrever_profissao2() {
+    let trab2 = document.getElementById('trab2').value
+    let empresa2 = document.getElementById('empresa2').value
+    let ano22 = document.getElementById('ano22').value
+    let detalhe22 = document.getElementById('detalhe22').value
     document.getElementById('work2').innerHTML = trab2
     document.getElementById('place2').innerHTML = 'Empresa: ' + empresa2
     document.getElementById('year22').innerHTML = 'Período: ' + ano22
@@ -60,10 +82,8 @@ function escrever_profissao() {
 }
 
 function escrever_habilidades() {
-
     let hab1 = document.getElementById('hab1').value
     let hab2 = document.getElementById('hab2').value
-
     document.getElementById('skill1').innerHTML = hab1
     document.getElementById('skill2').innerHTML = hab2
 
@@ -105,8 +125,8 @@ function escrever_habilidades() {
 function escrever_idioma() {
     let idioma = document.getElementById('idioma').value
     let idioma2 = document.getElementById('idioma2').value
-
     let nivel_idioma = document.getElementById('nivel-idioma').value
+
     switch (nivel_idioma) {
         case '1':
             document.getElementById('level-language1').innerHTML = 'Nativo / Fluente'
@@ -122,6 +142,7 @@ function escrever_idioma() {
             break;
     }
     let nivel_idioma2 = document.getElementById('nivel-idioma2').value
+
     switch (nivel_idioma2) {
         case '1':
             document.getElementById('level-language2').innerHTML = 'Nativo / Fluente'
@@ -136,7 +157,6 @@ function escrever_idioma() {
         default:
             break;
     }
-
     document.getElementById('language1').innerHTML = idioma
     document.getElementById('language2').innerHTML = idioma2
 }
@@ -151,6 +171,9 @@ $('#add-trab').click(function() {
 $('#add-idioma').click(function() {
     $('#idioma-container').append('<input type="text" id="idioma2" placeholder="Português"><label>Nível: <select id="nivel-idioma2"><option value="1">Nativo/ Fluente</option><option value="2">Intermediário</option><option value="3">Básico</option></select></label>');  
 })
+$('#add-curso').click(function () {
+    $('#curso-container').append('<div class="form-group div-small"><input type="text" id="certificacao2" placeholder="Nome do curso ou Certificação"><br><input type="text" id="lugar2" placeholder="Instituição"><br><input type="number" id="tempo2" placeholder="Ano de conclusão"><br><textarea id="adicional2" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br></div>')
+})
 //Desbilitar submit do form
 $(document).ready(function() {
     $("#cabecalho").submit(function() {
@@ -160,10 +183,8 @@ $(document).ready(function() {
 
 //Gerando PDF
 function salvarPdf() {
-
     let arquivo = new jsPDF()
     let curriculo = document.getElementById('curriculo')
-
     arquivo.fromHTML(curriculo)
     arquivo.save('Currículo.pdf')
 }
@@ -172,7 +193,6 @@ function salvarPdf() {
 function imprime() {
     let elemento = document.getElementById('conteudo')
     let conteudo = elemento.innerHTML
-
     window.print(conteudo)
 }
 

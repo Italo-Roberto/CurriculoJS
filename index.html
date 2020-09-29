@@ -51,10 +51,8 @@
               
                   <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="form-group div-small"  oninput="escrever_pessoal()">
-                        
                         <label>Seu nome completo: </label>
                         <input type="text" id="nome" placeholder="Ex: Italo Roberto"><br><br>
-                        
                         <label>Informações pessoais: </label><br>
                         <input type="number" class="w-25" id="idade" placeholder="Idade"> 
                         <input type="text" id="natural" class="campos" placeholder="Natural de qual cidade?"> <br>
@@ -96,19 +94,41 @@
               
                   <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample3">
                     <div class="form-group div-small" oninput="escrever_formacao()">
-    
                         <label>Formação Mais Recente</label><br>
                         <input type="text" id="curso1" placeholder="Nome do curso"><br>
                         <input type="text" id="escola1" placeholder="Instituição"><br>
                         <input type="number" id="ano1" placeholder="Ano de conclusão"><br>
                         <textarea id="detalhe1" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br>
                         <button id="add-form" class="btn btn-info">Adicionar Formação</button>
-        
-                        <div id="form1"></div>
                     </div>
+                    <div id="form1" oninput="escrever_formacao2()"></div>
                   </div>
                 </div>
             </div>
+
+            <div class="accordion" id="accordionExample7">
+              <div class="card" style="background: #555; border: none;">
+                <div class="card-header" id="headingOne" style="background: #555; border: none;">
+                  <h5 class="mb-0">
+                    <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseOne">
+                      <h4>Cursos e Certificações</h4>
+                    </button>
+                  </h5>
+                </div>
+            
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample7">
+                  <div class="form-group div-small" oninput="escrever_curso()">
+                      <label>Cursos e Certificações</label><br>
+                      <input type="text" id="certificacao1" placeholder="Nome do curso ou Certificação"><br>
+                      <input type="text" id="lugar1" placeholder="Instituição"><br>
+                      <input type="number" id="tempo1" placeholder="Ano de conclusão"><br>
+                      <textarea id="adicional1" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br>
+                      <button id="add-curso" class="btn btn-info">Adicionar Curso/ Certificação</button><br><br>                 
+                  </div>
+                  <div id="curso-container" oninput="escrever_curso2()"></div>
+                </div>
+              </div>
+          </div>
             
             <div class="accordion" id="accordionExample4">
                 <div class="card" style="background: #555; border: none;">
@@ -122,16 +142,14 @@
               
                   <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample4">
                     <div class="form-group div-small" oninput="escrever_profissao()">
-    
                         <label>Último Emprego</label><br>
                         <input type="text" id="trab1" placeholder="Função"><br>
                         <input type="text" id="empresa1" placeholder="Empresa"><br>
                         <input type="text" id="ano11" placeholder="Período"><br>
                         <textarea id="detalhe11" cols="25" rows="7" placeholder="Descrição das atividades"></textarea><br><br>
                         <button id="add-trab" class="btn btn-info">Adicionar Experiência</button>
-        
-                        <div id="exp1"></div>
                     </div>
+                    <div id="exp1" oninput="escrever_profissao2()"></div>
                   </div>
                 </div>
             </div>
@@ -260,6 +278,19 @@
                                 <p id="year2"></p>
                                 <p id="details2"></p>
                             </div>
+
+                            <h2 class="section-title">Cursos e Certificações</h2>
+                            <div class="form-group">
+                              <strong id="certification1"></strong><span id="place1"></span>
+                              <span id="time1"></span>
+                              <p id="adictional1"></p>
+                            </div>
+                            <div class="form-group">
+                              <strong id="certification2"></strong><span id="place2"></span>
+                              <span id="time2"></span>
+                              <p id="adictional2"></p>
+                            </div>
+
                             <hr class="w-100">
                             <h2 class="section-title">Experiências Profissionais</h2>
                             <div class="form-group">
