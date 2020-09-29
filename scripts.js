@@ -44,8 +44,8 @@ function escrever_curso() {
     let lugar = document.getElementById('lugar1').value
     let tempo = document.getElementById('tempo1').value
     let adicional = document.getElementById('adicional1').value
-    document.getElementById('certification1').innerHTML = certificacao + ': '
-    document.getElementById('place1').innerHTML = lugar + ' - '
+    document.getElementById('certification1').innerHTML = `${certificacao}: `
+    document.getElementById('place11').innerHTML = `${lugar} - `
     document.getElementById('time1').innerHTML = tempo
     document.getElementById('adictional1').innerHTML = adicional
 }
@@ -54,8 +54,8 @@ function escrever_curso2() {
     let lugar2 = document.getElementById('lugar2').value
     let tempo2 = document.getElementById('tempo2').value
     let adicional2 = document.getElementById('adicional2').value
-    document.getElementById('certification2').innerHTML = certificacao2 + ': '
-    document.getElementById('place2').innerHTML = lugar2 + ' - '
+    document.getElementById('certification2').innerHTML = `${certificacao2}: `
+    document.getElementById('place22').innerHTML = `${lugar2} - `
     document.getElementById('time2').innerHTML = tempo2
     document.getElementById('adictional2').innerHTML = adicional2
 }

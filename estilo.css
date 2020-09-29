@@ -163,7 +163,7 @@ body{
     @page 
     {
         size: auto;   /* auto is the initial value */
-        margin: 0 10px 0 2px;  /* this affects the margin in the printer settings */
+        margin: 10px 7px 5px 3px;  /* this affects the margin in the printer settings */
     }
     body{
         visibility: hidden;
@@ -177,7 +177,7 @@ body{
     .habilidades{
         display: block;
         visibility: visible;
-        -webkit-print-color-adjust: exact;
-
+        height: 75%;
+        border-right: solid grey 1px;;
     }
 }
