@@ -1,4 +1,5 @@
 body{
+    display: grid;
     background: whitesmoke;
 }
 #cabecalho{
@@ -11,6 +12,16 @@ body{
 #curriculo{
     border: solid grey 1px;
     background: white;
+}
+input:focus{
+    border-radius: 5px;
+    background: #edfdff;
+    border: solid #138496 2px;
+}
+textarea:focus{
+    border-radius: 5px;
+    background: #edfdff;
+    border: solid #138496 2px;
 }
 .cima-cr{
     display: flex; flex-direction: column; align-items: center;
