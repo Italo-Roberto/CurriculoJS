@@ -2,338 +2,346 @@
 <html lang="pt-br">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177349803-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177349803-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-        gtag('config', 'UA-177349803-1');
-    </script>
-    <!-- Meta tags gerais-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Currículo digital grátis">
-    <meta name="author" content="Italo Roberto">
-    <meta name="keywords"
-        content="currículo online, curriculo online grátis, curriculo gratis, currículo grátis, curriculo digital, curriculo digital gratis, faça seu curriculo gratis, crie seu curriculo">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="reply-to" content="https://italo-roberto.github.io/CurriculoJS/">
-    <meta name="copyright" content="https://italo-roberto.github.io/CurriculoJS/" />
+    gtag('config', 'UA-177349803-1');
+  </script>
+  <!-- Meta tags gerais-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Currículo digital grátis">
+  <meta name="author" content="Italo Roberto">
+  <meta name="keywords"
+    content="currículo online, curriculo online grátis, curriculo gratis, currículo grátis, curriculo digital, curriculo digital gratis, faça seu curriculo gratis, crie seu curriculo">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="reply-to" content="https://italo-roberto.github.io/CurriculoJS/">
+  <meta name="copyright" content="https://italo-roberto.github.io/CurriculoJS/" />
 
-    <meta property="og:locale" content="pt_BR">
-		<meta property="og:type" content="website">    
-		<meta property="og:url" content="https://italo-roberto.github.io/CurriculoJS/">
-		<meta property="og:title" content="Currículo digital grátis">
-		<meta property="og:site_name" content="Currículo digital">
-		<meta property="og:description" content="Currículo Digital Grátis ✅ Crie seu currículo digital grátis ✓Currículo Grátis ✓Crie seu currículo gŕatis">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://italo-roberto.github.io/CurriculoJS/">
+  <meta property="og:title" content="Currículo digital grátis">
+  <meta property="og:site_name" content="Currículo digital">
+  <meta property="og:description"
+    content="Currículo Digital Grátis ✅ Crie seu currículo digital grátis ✓Currículo Grátis ✓Crie seu currículo gŕatis">
 
-    <link rel="shortcut icon" href="img-edit.ico" type="image/x-icon">
-    <link rel="base" href="https://italo-roberto.github.io/CurriculoJS/">
-    <link rel="canonical" href="https://italo-roberto.github.io/CurriculoJS/">
-    <!-- Css-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="estilo.css">
-    <!-- Sweet alert e jsPDF -->
-    <script src="jsPDF/dist/jspdf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <title>Currículo Digital</title>
+  <link rel="shortcut icon" href="img-edit.ico" type="image/x-icon">
+  <link rel="base" href="https://italo-roberto.github.io/CurriculoJS/">
+  <link rel="canonical" href="https://italo-roberto.github.io/CurriculoJS/">
+  <!-- Css-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilo.css">
+  <!-- Sweet alert e jsPDF -->
+  <script src="jsPDF/dist/jspdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <title>Currículo Digital</title>
 </head>
 
 <body onloadstart="doacao()">
-    <header>
-        <form id="cabecalho">
-            <div class="accordion" id="accordionExample">
-                <div class="card" style="background: #555; border: none;">
-                  <div class="card-header" id="headingOne" style="background: #555; border: none;">
-                    <h5 class="mb-0">
-                      <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <h4 id="titulo-form">Informações Pessoais</h4>
-                      </button>
-                    </h5>
-                  </div>
-              
-                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="form-group div-small"  oninput="escrever_pessoal()">
-                        <label>Seu nome completo: </label>
-                        <input type="text" id="nome" placeholder="Ex: Italo Roberto"><br><br>
-                        <label>Informações pessoais: </label><br>
-                        <input type="number" class="w-25" id="idade" placeholder="Idade"> 
-                        <input type="text" id="natural" class="campos" placeholder="Natural de qual cidade?"> <br>
-                        <input type="text" id="telefone" class="campos" placeholder="Telefone para contato"><br>
-                        <input type="email" id="email" class="campos" placeholder="Seu email">
-                    </div>
-                  </div>
-                </div>
-            </div>
-
-            <div class="accordion" id="accordionExample2">
-                <div class="card" style="background: #555; border: none;">
-                  <div class="card-header" id="headingTwo" style="background: #555; border: none;">
-                    <h5 class="mb-0">
-                      <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
-                        <h4>Interesse Profissional</h4>
-                      </button>
-                    </h5>
-                  </div>
-              
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample2">
-                    <div class="form-group div-small" oninput="escrever_interesse()">
-                    <textarea id="interesse" cols="26" rows="8"
-                        placeholder="Qual habilidade pretende desenvolver ou aprimorar? Quais áreas você gosta mais de trabalhar?"></textarea>
-                    </div>
-                  </div>
-                </div>
-            </div>
-
-            <div class="accordion" id="accordionExample3">
-                <div class="card" style="background: #555; border: none;">
-                  <div class="card-header" id="headingThree" style="background: #555; border: none;">
-                    <h5 class="mb-0">
-                      <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
-                        <h4>Formação Acadêmica</h4>
-                      </button>
-                    </h5>
-                  </div>
-              
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample3">
-                    <div class="form-group div-small" oninput="escrever_formacao()">
-                        <label>Formação Mais Recente</label><br>
-                        <input type="text" id="curso1" placeholder="Nome do curso"><br>
-                        <input type="text" id="escola1" placeholder="Instituição"><br>
-                        <input type="number" id="ano1" placeholder="Ano de conclusão"><br>
-                        <textarea id="detalhe1" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br>
-                        <button id="add-form" class="btn btn-info">Adicionar Formação</button>
-                    </div>
-                    <div id="form1" oninput="escrever_formacao2()"></div>
-                  </div>
-                </div>
-            </div>
-
-            <div class="accordion" id="accordionExample7">
-              <div class="card" style="background: #555; border: none;">
-                <div class="card-header" id="headingFour" style="background: #555; border: none;">
-                  <h5 class="mb-0">
-                    <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseOne">
-                      <h4>Cursos e Certificações</h4>
-                    </button>
-                  </h5>
-                </div>
-            
-                <div id="collapseSeven" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample7">
-                  <div class="form-group div-small" oninput="escrever_curso()">
-                      <label>Cursos e Certificações</label><br>
-                      <input type="text" id="certificacao1" placeholder="Nome do curso ou Certificação"><br>
-                      <input type="text" id="lugar1" placeholder="Instituição"><br>
-                      <input type="number" id="tempo1" placeholder="Ano de conclusão"><br>
-                      <textarea id="adicional1" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br>
-                      <button id="add-curso" class="btn btn-info">Adicionar Curso/ Certificação</button><br><br>                 
-                  </div>
-                  <div id="curso-container" oninput="escrever_curso2()"></div>
-                </div>
-              </div>
+  <header>
+    <form id="cabecalho">
+      <div class="accordion" id="accordionExample">
+        <div class="card" style="background: #555; border: none;">
+          <div class="card-header" id="headingOne" style="background: #555; border: none;">
+            <h5 class="mb-0">
+              <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                <h4 id="titulo-form">Informações Pessoais</h4>
+              </button>
+            </h5>
           </div>
-            
-            <div class="accordion" id="accordionExample4">
-                <div class="card" style="background: #555; border: none;">
-                  <div class="card-header" id="headingFive" style="background: #555; border: none;">
-                    <h5 class="mb-0">
-                      <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
-                        <h4>Experiências Profissionais</h4>
-                      </button>
-                    </h5>
-                  </div>
-              
-                  <div id="collapseFour" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample4">
-                    <div class="form-group div-small" oninput="escrever_profissao()">
-                        <label>Último Emprego</label><br>
-                        <input type="text" id="trab1" placeholder="Função"><br>
-                        <input type="text" id="empresa1" placeholder="Empresa"><br>
-                        <input type="text" id="ano11" placeholder="Período"><br>
-                        <textarea id="detalhe11" cols="25" rows="7" placeholder="Descrição das atividades"></textarea><br><br>
-                        <button id="add-trab" class="btn btn-info">Adicionar Experiência</button>
-                    </div>
-                    <div id="exp1" oninput="escrever_profissao2()"></div>
-                  </div>
-                </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="form-group div-small" oninput="escrever_pessoal()">
+              <label>Seu nome completo: </label>
+              <input type="text" id="nome" placeholder="Ex: Italo Roberto"><br><br>
+              <label>Informações pessoais: </label><br>
+              <input type="number" class="w-25" id="idade" min="0" placeholder="Idade">
+              <input type="text" id="natural" class="campos" placeholder="Natural de qual cidade?"> <br>
+              <input type="text" id="telefone" class="campos" placeholder="Telefone para contato"><br>
+              <input type="email" id="email" class="campos" placeholder="Seu email">
             </div>
-            
-            <div class="accordion" id="accordionExample5">
-                <div class="card" style="background: #555; border: none;">
-                  <div class="card-header" id="headingSix" style="background: #555; border: none;">
-                    <h5 class="mb-0">
-                      <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseOne">
-                        <h4>Habilidades</h4>
-                      </button>
-                    </h5>
-                  </div>
-              
-                  <div id="collapseFive" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample5">
-                    <div class="form-group div-small" oninput="escrever_habilidades()">
-    
-                        <label>Habilidade 1</label>
-                        <input type="text" id="hab1"><br>
-            
-                        <label>Nível da habilidade</label>
-                        <select id="nivel1">
-                            <option>25%</option>
-                            <option>50%</option>
-                            <option>75%</option>
-                            <option>100%</option>
-                        </select><br><br>
-            
-                        <label>Habilidade 2</label>
-                        <input type="text" id="hab2"><br>
-            
-                        <label>Nível da habilidade</label>
-                        <select id="nivel2">
-                            <option>25%</option>
-                            <option>50%</option>
-                            <option>75%</option>
-                            <option>100%</option>
-                        </select>
-                    </div>
-                  </div>
-                </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="accordionExample2">
+        <div class="card" style="background: #555; border: none;">
+          <div class="card-header" id="headingTwo" style="background: #555; border: none;">
+            <h5 class="mb-0">
+              <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="true" aria-controls="collapseOne">
+                <h4>Interesse Profissional</h4>
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample2">
+            <div class="form-group div-small" oninput="escrever_interesse()">
+              <textarea id="interesse" cols="26" rows="8"
+                placeholder="Qual habilidade pretende desenvolver ou aprimorar? Quais áreas você gosta mais de trabalhar?"></textarea>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div class="accordion" id="accordionExample6">
-                <div class="card" style="background: #555; border: none;">
-                  <div class="card-header" id="headingSeven" style="background: #555; border: none;">
-                    <h5 class="mb-0">
-                      <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseOne">
-                        <h4>Idiomas</h4>
-                      </button>
-                    </h5>
-                  </div>
-              
-                  <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample6">
-                    <div class="form-group div-small" oninput="escrever_idioma()">
-                        <input type="text" id="idioma" placeholder="Português">
-                        <label>Nível: 
-                            <select id="nivel-idioma">
-                                <option value="1">Nativo/ Fluente</option>
-                                <option value="2">Intermediário</option>
-                                <option value="3">Básico</option>
-                            </select>
-                        </label>
-                        <div id="idioma-container"></div>
-                        <button id="add-idioma" class="btn btn-info">Adicionar Idioma</button>
-                    </div>
-                  </div>
-                </div>
+      <div class="accordion" id="accordionExample3">
+        <div class="card" style="background: #555; border: none;">
+          <div class="card-header" id="headingThree" style="background: #555; border: none;">
+            <h5 class="mb-0">
+              <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="true" aria-controls="collapseOne">
+                <h4>Formação Acadêmica</h4>
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample3">
+            <div class="form-group div-small" oninput="escrever_formacao()">
+              <label>Formação Mais Recente</label><br>
+              <input type="text" id="curso1" placeholder="Nome do curso"><br>
+              <input type="text" id="escola1" placeholder="Instituição"><br>
+              <input type="number" id="ano1" min="1970" placeholder="Ano de conclusão"><br>
+              <textarea id="detalhe1" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br>
+              <button id="add-form" class="btn btn-info">Adicionar Formação</button>
             </div>
-            
-            <div class="form-group div-small">
-                <input type="reset" value="Limpar Campos" class="btn btn-warning mb-2">
+            <div id="form1" oninput="escrever_formacao2()"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="accordionExample7">
+        <div class="card" style="background: #555; border: none;">
+          <div class="card-header" id="headingFour" style="background: #555; border: none;">
+            <h5 class="mb-0">
+              <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseSeven"
+                aria-expanded="true" aria-controls="collapseOne">
+                <h4>Cursos e Certificações</h4>
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseSeven" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample7">
+            <div class="form-group div-small" oninput="escrever_curso()">
+              <label>Cursos e Certificações</label><br>
+              <input type="text" id="certificacao1" placeholder="Nome do curso ou Certificação"><br>
+              <input type="text" id="lugar1" placeholder="Instituição"><br>
+              <input type="number" id="tempo1" min="1970" placeholder="Ano de conclusão"><br>
+              <textarea id="adicional1" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br>
+              <button id="add-curso" class="btn btn-info">Adicionar Curso/ Certificação</button><br><br>
             </div>
-        </form>
-    </header>
+            <div id="curso-container" oninput="escrever_curso2()"></div>
+          </div>
+        </div>
+      </div>
 
-    <main>
-        <article id="artigo" class="container d-flex flex-column">
-            <section id="curriculo">
-                <div class="cima-cr">
-                    <h1 id="titulo-principal"></h1>
-                    <ul>
-                        <li id="idade-atual"></li>
-                        <li id="naturalidade"></li>
-                        <li id="contato"></li>
-                        <li id="mail"></li>
-                    </ul>
-                </div>
+      <div class="accordion" id="accordionExample4">
+        <div class="card" style="background: #555; border: none;">
+          <div class="card-header" id="headingFive" style="background: #555; border: none;">
+            <h5 class="mb-0">
+              <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseFour"
+                aria-expanded="true" aria-controls="collapseOne">
+                <h4>Experiências Profissionais</h4>
+              </button>
+            </h5>
+          </div>
 
-                <hr class="w-100">
-
-                <div class="container">
-                    <div id="conteudo">
-                        <div class="habilidades">
-                            <h4 class="mb-4">Habilidades Extras</h4>
-                            <h5 id="skill1"></h5>
-                            <p id="level1"></p><br><br>
-
-                            <h5 id="skill2"></h5>
-                            <p id="level2"></p><br><br>
-
-                            <h4>Idiomas</h4>
-                            <h5 id="language1"></h5>
-                            <p id="level-language1"></p><br><br>
-
-                            <h5 id="language2"></h5>
-                            <p id="level-language2"></p><br><br>
-                        </div>
-                        <div class="principal">
-                            <div>
-                                <h2 class="section-title">Interesse Profissional</h2>
-                                <p id="interest" style="text-indent: 5px;"></p>
-                            </div>
-                            <hr class="w-100">
-
-                            <h2 class="section-title">Formação Acadêmica</h2>
-                            <div class="form-group">
-                                <h3 id="edu1"></h3>
-                                <h4 id="inst1"></h4>
-                                <p id="year1"></p>
-                                <p id="details1"></p>
-                            </div>
-                            <div class="form-group">
-                                <h3 id="edu2"></h3>
-                                <h4 id="inst2"></h4>
-                                <p id="year2"></p>
-                                <p id="details2"></p>
-                            </div>
-
-                            <h2 class="section-title">Cursos e Certificações</h2>
-                            <div class="form-group">
-                              <strong id="certification1"></strong><span id="place11"></span>
-                              <span id="time1"></span>
-                              <p id="adictional1"></p>
-                            </div>
-                            <div class="form-group">
-                              <strong id="certification2"></strong><span id="place22"></span>
-                              <span id="time2"></span>
-                              <p id="adictional2"></p>
-                            </div>
-
-                            <hr class="w-100">
-                            <h2 class="section-title">Experiências Profissionais</h2>
-                            <div class="form-group">
-                                <h3 id="work1"></h3>
-                                <h4 id="place1"></h4>
-                                <p id="year11"></p>
-                                <p id="details11"></p>
-                            </div>
-                            <div class="form-group">
-                                <h3 id="work2"></h3>
-                                <h4 id="place2"></h4>
-                                <p id="year22"></p>
-                                <p id="details22"></p>
-                            </div>
-                            <hr class="w-100">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div class="botoes">
-                <button id="pdf" class="btn btn-info shadow-sm" onclick="salvarPdf()">Gerar PDF</button>
-                <button id="imprimir" class="btn btn-warning shadow-sm ml-2" onclick="imprime()">Imprimir</button>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample4">
+            <div class="form-group div-small" oninput="escrever_profissao()">
+              <label>Último Emprego</label><br>
+              <input type="text" id="trab1" placeholder="Função"><br>
+              <input type="text" id="empresa1" placeholder="Empresa"><br>
+              <input type="text" id="ano11" placeholder="Período"><br>
+              <textarea id="detalhe11" cols="25" rows="7" placeholder="Descrição das atividades"></textarea><br><br>
+              <button id="add-trab" class="btn btn-info">Adicionar Experiência</button>
             </div>
-        </article>
-    </main>
+            <div id="exp1" oninput="escrever_profissao2()"></div>
+          </div>
+        </div>
+      </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-    <script src="scripts.js"></script>
+      <div class="accordion" id="accordionExample5">
+        <div class="card" style="background: #555; border: none;">
+          <div class="card-header" id="headingSix" style="background: #555; border: none;">
+            <h5 class="mb-0">
+              <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseFive"
+                aria-expanded="true" aria-controls="collapseOne">
+                <h4>Habilidades</h4>
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseFive" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample5">
+            <div class="form-group div-small" oninput="escrever_habilidades()">
+
+              <label>Habilidade 1</label>
+              <input type="text" id="hab1"><br>
+
+              <label>Nível da habilidade</label>
+              <select id="nivel1">
+                <option>25%</option>
+                <option>50%</option>
+                <option>75%</option>
+                <option>100%</option>
+              </select><br><br>
+
+              <label>Habilidade 2</label>
+              <input type="text" id="hab2"><br>
+
+              <label>Nível da habilidade</label>
+              <select id="nivel2">
+                <option>25%</option>
+                <option>50%</option>
+                <option>75%</option>
+                <option>100%</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="accordionExample6">
+        <div class="card" style="background: #555; border: none;">
+          <div class="card-header" id="headingSeven" style="background: #555; border: none;">
+            <h5 class="mb-0">
+              <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseSeven"
+                aria-expanded="true" aria-controls="collapseOne">
+                <h4>Idiomas</h4>
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample6">
+            <div class="form-group div-small" oninput="escrever_idioma()">
+              <input type="text" id="idioma" placeholder="Português">
+              <label>Nível:
+                <select id="nivel-idioma">
+                  <option value="1">Nativo/ Fluente</option>
+                  <option value="2">Intermediário</option>
+                  <option value="3">Básico</option>
+                </select>
+              </label>
+              <div id="idioma-container"></div>
+              <button id="add-idioma" class="btn btn-info">Adicionar Idioma</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group div-small">
+        <input type="reset" value="Limpar Campos" class="btn btn-warning mb-2">
+      </div>
+    </form>
+  </header>
+
+  <main>
+    <article id="artigo" class="container d-flex flex-column">
+      <section id="curriculo">
+        <div class="cima-cr">
+          <h1 id="titulo-principal"></h1>
+          <ul>
+            <li id="idade-atual"></li>
+            <li id="naturalidade"></li>
+            <li id="contato"></li>
+            <li id="mail"></li>
+          </ul>
+        </div>
+
+        <hr class="w-100">
+
+        <div class="container">
+          <div id="conteudo">
+            <div class="habilidades">
+              <h4 class="mb-4">Habilidades Extras</h4>
+              <h5 id="skill1"></h5>
+              <p id="level1"></p><br><br>
+
+              <h5 id="skill2"></h5>
+              <p id="level2"></p><br><br>
+
+              <h4>Idiomas</h4>
+              <h5 id="language1"></h5>
+              <p id="level-language1"></p><br><br>
+
+              <h5 id="language2"></h5>
+              <p id="level-language2"></p><br><br>
+            </div>
+            <div class="principal">
+              <div>
+                <h2 class="section-title">Interesse Profissional</h2>
+                <p id="interest" style="text-indent: 5px;"></p>
+              </div>
+              <hr class="w-100">
+
+              <h2 class="section-title">Formação Acadêmica</h2>
+              <div class="form-group">
+                <h3 id="edu1"></h3>
+                <h4 id="inst1"></h4>
+                <p id="year1"></p>
+                <p id="details1"></p>
+              </div>
+              <div class="form-group">
+                <h3 id="edu2"></h3>
+                <h4 id="inst2"></h4>
+                <p id="year2"></p>
+                <p id="details2"></p>
+              </div>
+
+              <h2 class="section-title">Cursos e Certificações</h2>
+              <div class="form-group">
+                <strong id="certification1"></strong><span id="place11"></span>
+                <span id="time1"></span>
+                <p id="adictional1"></p>
+              </div>
+              <div class="form-group">
+                <strong id="certification2"></strong><span id="place22"></span>
+                <span id="time2"></span>
+                <p id="adictional2"></p>
+              </div>
+
+              <hr class="w-100">
+              <h2 class="section-title">Experiências Profissionais</h2>
+              <div class="form-group">
+                <h3 id="work1"></h3>
+                <h4 id="place1"></h4>
+                <p id="year11"></p>
+                <p id="details11"></p>
+              </div>
+              <div class="form-group">
+                <h3 id="work2"></h3>
+                <h4 id="place2"></h4>
+                <p id="year22"></p>
+                <p id="details22"></p>
+              </div>
+              <hr class="w-100">
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="botoes">
+        <button id="pdf" class="btn btn-info shadow-sm" onclick="salvarPdf()">Gerar PDF</button>
+        <button id="imprimir" class="btn btn-warning shadow-sm ml-2" onclick="imprime()">Imprimir</button>
+      </div>
+    </article>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
 </body>
 
 </html>

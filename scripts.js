@@ -163,7 +163,7 @@ function escrever_idioma() {
 
 //Botões de adição de campos
 $('#add-form').click(function() {
-  $('#form1').append('<div class="form-group div-small"><label>Formação Anterior</label><br><input type="text" id="curso2" placeholder="Nome do curso"><br><input type="text" id="escola2" placeholder="Instituição"><br><input type="number" id="ano2" placeholder="Ano de conclusão"><br><textarea id="detalhe2" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br></div>');  
+  $('#form1').append('<div class="form-group div-small"><label>Formação Anterior</label><br><input type="text" id="curso2" placeholder="Nome do curso"><br><input type="text" id="escola2" placeholder="Instituição"><br><input type="number" id="ano2" min="1970" placeholder="Ano de conclusão"><br><textarea id="detalhe2" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br></div>');  
 })
 $('#add-trab').click(function() {
     $('#exp1').append('<div class="form-group div-small"><label>Trabalho Anterior</label><br><input type="text" id="trab2" placeholder="Função"><br><input type="text" id="empresa2" placeholder="Empresa"><br><input type="text" id="ano22" placeholder="Período"><br><textarea id="detalhe22" cols="25" rows="7" placeholder="Descrição das atividades"></textarea><br><br></div>');  
@@ -172,7 +172,7 @@ $('#add-idioma').click(function() {
     $('#idioma-container').append('<input type="text" id="idioma2" placeholder="Português"><label>Nível: <select id="nivel-idioma2"><option value="1">Nativo/ Fluente</option><option value="2">Intermediário</option><option value="3">Básico</option></select></label>');  
 })
 $('#add-curso').click(function () {
-    $('#curso-container').append('<div class="form-group div-small"><input type="text" id="certificacao2" placeholder="Nome do curso ou Certificação"><br><input type="text" id="lugar2" placeholder="Instituição"><br><input type="number" id="tempo2" placeholder="Ano de conclusão"><br><textarea id="adicional2" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br></div>')
+    $('#curso-container').append('<div class="form-group div-small"><input type="text" id="certificacao2" placeholder="Nome do curso ou Certificação"><br><input type="text" id="lugar2" placeholder="Instituição"><br><input type="number" id="tempo2" min="1970" placeholder="Ano de conclusão"><br><textarea id="adicional2" cols="25" rows="7" placeholder="Detalhes do curso"></textarea><br><br></div>')
 })
 //Desbilitar submit do form
 $(document).ready(function() {
